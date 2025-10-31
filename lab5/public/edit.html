@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагувати Ферму</title>
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #ffc107; 
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>✏️ Редагувати Ферму</h1>
+        <p><a href="index.html" style="color: white;">Повернутися до перегляду</a></p>
+    </header>
+
+    <div class="form-container">
+        <form id="farm-form">
+            <input type="hidden" id="farm-id" value=""> 
+            
+            <div class="form-group">
+                <label for="location">Місцезнаходження (Область, місто/село):</label>
+                <input type="text" id="location" required 
+                       pattern="[А-Яа-яЄєІіЇї0-9\s.,-]+" 
+                       title="Використовуйте українські літери, цифри, пробіли, коми та дефіси."
+                       placeholder="Наприклад: Львівська обл., с. Велике">
+            </div>
+
+            <div class="form-group">
+                <label for="animalCount">Кількість тварин (гол):</label>
+                <input type="number" id="animalCount" required min="1" 
+                       title="Має бути ціле число, більше нуля."
+                       placeholder="Мінімум 1">
+            </div>
+
+            <div class="form-group">
+                <label for="fanPowerWatts">Потужність вентиляторів (Вт):</label>
+                <input type="number" id="fanPowerWatts" required min="10" 
+                       title="Має бути число, мінімум 10 Вт."
+                       placeholder="Мінімум 10">
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">URL Зображення:</label>
+                <input type="text" id="imageUrl" 
+                       placeholder="Наприклад: images/my_farm.jpg (необов'язково)">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Зберегти Зміни</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/edit.js"></script> 
+</body>
+</html>
