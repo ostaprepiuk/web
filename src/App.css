@@ -1,0 +1,326 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.navigation a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.navigation a:hover {
+    border-bottom: 2px solid #ffc107;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #e9ecef;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+
+.content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.content-wrap h2 {
+    color: #007bff;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.farm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.farm-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.farm-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.farm-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.3em;
+    min-height: 40px;
+}
+
+.card-content p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.price-tag {
+    font-size: 1.1em;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #b35900;
+    border-top: 1px solid #007bff;
+    padding-top: 10px;
+}
+
+.price-tag span {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.card-actions {
+    display: flex;
+    padding: 0 15px 15px;
+    gap: 8px;
+}
+
+.card-actions button {
+    flex-grow: 1;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.details-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.details-btn:hover {
+    background-color: #1e7e34;
+}
+
+.content-wrap > div > h2 {
+    color: #007bff;
+}
+.content-wrap > div > div {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .farm-grid {
+        grid-template-columns: 1fr;
+    }
+    .header h1 {
+        font-size: 1.8em;
+    }
+    .navigation a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.farm-details-container {
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.details-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.details-content {
+    width: 50%;
+}
+
+.details-content p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.details-price-tag {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #b35900;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px dashed #eee;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .farm-details-container {
+        flex-direction: column;
+    }
+
+    .details-image, .details-content {
+        width: 100%;
+    }
+}
+
+.buy-now-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.buy-now-btn:hover {
+    background-color: #1e8b39;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: inline-block;
+    width: auto;
+    margin-top: 15px; 
+    padding: 10px 20px; 
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+.view-more-btn-toggle {
+    display: inline-block;
+    background-color: #28a745; 
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.view-more-btn-toggle:hover {
+    background-color: #1e8b39;
+    transform: translateY(-2px);
+}
+
+/* Секція, яка розкривається. Початковий стан: приховано. */
+.extended-content-section {
+    max-height: 0; 
+    opacity: 0;
+    overflow: hidden;
+    /* Ключовий момент: тривалий перехід для max-height */
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease;
+    width: 100%; 
+}
+
+/* Кінцевий стан: розкрито. */
+.extended-content-section.content-visible {
+    /* max-height має бути достатньо великим, щоб вмістити весь контент */
+    max-height: 800px; 
+    opacity: 1;
+}
+
+/* Для кнопки "Перейти до повного каталогу" (Link) */
+.view-more-btn {
+    display: inline-block;
+    background-color: #ffc107; 
+    color: #343a40;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-more-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
