@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 5px;
+}
+
+table, th, td {
+  border: 1px solid #555;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  background: #ddd;
+}
+
+h1 {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Ферми</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Список ферм</h1>
+
+  <!-- Пошук -->
+  <label>Пошук за місцезнаходженням:</label>
+  <input type="text" id="searchInput" placeholder="Введіть місто">
+  <button id="searchBtn">Пошук</button>
+
+  <!-- Сортування -->
+  <label>Сортувати за:</label>
+  <select id="sortSelect">
+    <option value="location">Місцезнаходженням</option>
+    <option value="animals">Кількістю тварин</option>
+    <option value="power">Потужністю вентиляторів</option>
+  </select>
+  <button id="sortBtn">Сортувати</button>
+
+  <!-- Розрахунок -->
+  <button id="countBtn">Порахувати суму потужності вентиляторів</button>
+  <p id="totalPower"></p>
+
+  <hr>
+
+  <!-- Таблиця -->
+  <table>
+    <thead>
+      <tr>
+        <th>Місцезнаходження</th>
+        <th>Кількість тварин</th>
+        <th>Потужність вентиляторів (Вт)</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

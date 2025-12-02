@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Ферми</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Список ферм</h1>
+
+  <div class="navigation-buttons">
+    <button id="showCreateBtn">Додати нову ферму</button>
+  </div>
+  
+  <hr>
+
+  <label>Пошук за місцезнаходженням:</label>
+  <input type="text" id="searchInput" placeholder="Введіть місто">
+  <button id="searchBtn">Пошук</button>
+
+  <label>Сортувати за:</label>
+  <select id="sortSelect">
+    <option value="location">Місцезнаходженням</option>
+    <option value="animals">Кількістю тварин</option>
+    <option value="power">Потужністю вентиляторів</option>
+  </select>
+  <button id="sortBtn">Сортувати</button>
+
+  <button id="countBtn">Порахувати суму потужності вентиляторів</button>
+  <p id="totalPower"></p>
+
+  <hr>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Місцезнаходження</th>
+        <th>Кількість тварин</th>
+        <th>Потужність вентиляторів (Вт)</th>
+        <th>Дії</th> </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <div id="farmModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modalTitle"></h2>
+      
+      <form id="farmForm">
+        
+        <input type="hidden" id="farmId" value=""> 
+
+        <label for="location">Місцезнаходження (Місто):</label>
+        <input type="text" id="location" required 
+               pattern="[А-Яа-яЄєІіЇї\s]+" 
+               title="Введіть назву міста кирилицею" 
+               maxlength="50">
+
+        <label for="animals">Кількість тварин:</label>
+        <input type="number" id="animals" required min="1" max="1000" step="1" 
+               title="Введіть ціле число від 1 до 1000">
+
+        <label for="power">Потужність вентиляторів (Вт):</label>
+        <input type="number" id="power" required min="100" max="50000" step="10" 
+               title="Введіть число кратне 10, від 100 до 50000 Вт">
+
+        <button type="submit" id="saveFarmBtn">Зберегти</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

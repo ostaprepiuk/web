@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управління Фермами (View Page)</title>
+    <link rel="stylesheet" href="css/index.css"> 
+</head>
+<body>
+    <header class="header">
+        <h1>🐄 Мої Ферми</h1>
+        <p style="margin-top: 10px;">
+            <a href="create.html" style="background-color: #28a745; color: white; padding: 10px 15px; border-radius: 4px; text-decoration: none;">➕ Створити Нову Ферму</a>
+        </p>
+    </header>
+
+    <div class="container">
+        <aside class="control-panel">
+            <h2>🛠️ Керування Фермами</h2>
+            <div class="control-section">
+                <h3>Сортування</h3>
+                <label for="sort-select">Сортувати за:</label>
+                <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <select id="sort-select" style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="location_asc">Місцезнаходження (А-Я)</option>
+                        <option value="animalCount_desc">Кількість тварин (спад.)</option>
+                        <option value="fanPowerWatts_desc">Потужність вентиляторів (спад.)</option>
+                    </select>
+                    <button id="sort-button" style="background-color: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Сортувати</button>
+                </div>
+            </div>
+            <div class="control-section">
+                <h3>Пошук</h3>
+                <label for="search-input">Шукати (по місцезнаходженню):</label>
+                <input type="text" id="search-input" placeholder="Введіть місцезнаходження...">
+            </div>
+            <hr>
+            <div class="control-section">
+                <h3>Підрахунок</h3>
+                <p>Загальна потужність вентиляторів:</p>
+                <div class="total-display">
+                    <button id="count-total-fans-btn">Підрахувати</button>
+                    <span id="total-fan-power">0 Вт</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="farm-grid" id="farm-container"></main>
+    </div>
+
+    <script src="js/index.js"></script> 
+</body>
+</html>
